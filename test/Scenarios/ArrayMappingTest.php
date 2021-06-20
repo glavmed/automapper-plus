@@ -116,7 +116,7 @@ class ArrayMappingTest extends TestCase
         $source = ['child' => [$childDto]];
         $result = $mapper->map($source, ParentClass::class);
 
-        $this->assertInternalType('array', $result->child);
+        $this->assertIsArray($result->child);
         $this->assertEquals('John Doe', $result->child[0]->name);
     }
 
